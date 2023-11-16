@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'shop',
 ]
 
 MIDDLEWARE = [
@@ -81,11 +82,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ["PGDATABASE"],
-        'USER': os.environ["PGUSER"],
-        'PASSWORD': os.environ["PGPASSWORD"],
-        'HOST': os.environ["PGHOST"],
-        'PORT': os.environ["PGPORT"],
+        'NAME': os.getenv("railway"),
+        'USER': os.getenv("postgres"),
+        'PASSWORD': os.getenv("Fe1Bc61cAb65d54a3ebFEEAG3E42GA2C"),
+        'HOST': os.getenv("roundhouse.proxy.rlwy.net"),
+        'PORT': os.getenv("21914"),
     }
 }
 
